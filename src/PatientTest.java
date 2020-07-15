@@ -12,24 +12,24 @@ public class PatientTest {
 		int newpostalCode;
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Enter Patient's Id: ");
-		newpatientId = input.nextInt();
-		
 		System.out.println("Enter Patient's Firstname: ");
-		newfirstName = input.next();
+		newfirstName = input.nextLine();
 		
 		System.out.println("Enter Patient's Lastname: ");
-		newlastName = input.next();
+		newlastName = input.nextLine();
 		
 		System.out.println("Enter Patient's Address: ");
-		newaddress = input.next();
+		newaddress = input.nextLine();
 		
-		System.out.println("Enter Patient's City: ");
-		newcity = input.next();
+		System.out.println("Enter Patient's City:");
+		newcity = input.nextLine();
 		
 		System.out.println("Enter Patient's Province: ");
-		newprovince = input.next();
+		newprovince = input.nextLine();
 		
+		System.out.println("Enter Patient's Id:");
+		newpatientId = input.nextInt();
+				
 		System.out.println("Enter Patient's Postalcode: ");
 		newpostalCode = input.nextInt();
 		
@@ -37,9 +37,9 @@ public class PatientTest {
 		patientReport.setProvince(newprovince);
 		patientReport.setPostalCode(newpostalCode);
 
-		System.out.printf("Person PatientId: %d \n Firstname:%s \n Lastname:%s \n Address: %s \n City: %s \n Province: %s \n Postalcode: %d ",
-				patientReport.getPatientId(),patientReport.getFirstName(),patientReport.getLastName(),patientReport.getAddress(),
-				patientReport.getCity(),patientReport.getProvince(),patientReport.getPostalCode());
+		System.out.printf(" Person Firstname:%s \n Lastname:%s \n Address: %s \n City: %s \n Province: %s \n PatientId: %d \n Postalcode: %d  ",
+				patientReport.getFirstName(),patientReport.getLastName(),patientReport.getAddress(),
+				patientReport.getCity(),patientReport.getProvince(),patientReport.getPostalCode(),patientReport.getPatientId());
 
 	}
 
